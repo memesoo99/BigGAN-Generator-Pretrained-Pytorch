@@ -37,5 +37,5 @@ if __name__ == '__main__':
 
     img = 0.5 * (img.data + 1) 
     pil = torchvision.transforms.ToPILImage()(img.squeeze()) 
-    pil.show()
+    pil.save("demo_dog.jpg")
 

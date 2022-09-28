@@ -10,7 +10,7 @@ class CrossReplicaBN2d(nn.BatchNorm2d):
         self.register_buffer('standing_means', torch.empty(50, num_features)) 
         self.register_buffer('standing_vars', torch.empty(50, num_features)) 
     
-    @torch._jit_internal.weak_script_method 
+    # @torch._jit_internal.weak_script_method 
     def forward(self, input, truncation=1.0): 
         self._check_input_dim(input) 
         exponential_average_factor = 0.0 
